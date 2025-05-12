@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sugar Bliss</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <!-- Підключення стилів Swiper -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="img/logo.png" alt="Sugar Bliss Logo" width="150">
+                </a>
+            </div>
+            <nav class="desktop-nav">
+                <ul>
+                    <li><a href="#about-us">About Us</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#special-orders">Special Orders</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="products" class="section">
+            <div class="container">
+                <h2>Check Out Our Best Sellers</h2>
+                <div class="product-gallery">
+                    <div class="product-item">
+                        <img src="img/product1.png" alt="Cake with strawberries" width="300">
+                        <button class="open-modal-btn" data-modal="modal1">Детальніше</button>
+                    </div>
+                    <div class="product-item">
+                        <img src="img/product1.png" alt="Macarons" width="300">
+                        <button class="open-modal-btn" data-modal="modal2">Детальніше</button>
+                    </div>
+                    <div class="product-item">
+                        <img src="img/product1.png" alt="Cupcakes" width="300">
+                        <button class="open-modal-btn" data-modal="modal3">Детальніше</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Модальне вікно -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Торт з полуницею</h2>
+            <p>Опис продукту: Смачний торт із свіжою полуницею та кремом.</p>
+        </div>
+    </div>
+
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Макарони</h2>
+            <p>Опис продукту: Легкі, повітряні макарони з різними начинками.</p>
+        </div>
+    </div>
+
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Капкейки</h2>
+            <p>Опис продукту: Капкейки з ванільним кремом і фруктовими декораціями.</p>
+        </div>
+    </div>
+
+    <script src="js/mobile-menu.js"></script>
+    <script src="js/modal.js"></script>
+
+    <!-- Підключення Swiper.js -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        // Ініціалізація Swiper для слайдера
+        const swiper = new Swiper('.swiper-container', {
+            loop: true,
+            slidesPerView: 1,
+            spaceBetween: 10,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                },
+                480: {
+                    slidesPerView: 2,
+                },
+                768: {
+                    slidesPerView: 3,
+                },
+                1024: {
+                    slidesPerView: 4,
+                },
+            },
+        });
+    </script>
+</body>
+</html>
